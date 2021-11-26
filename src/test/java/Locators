@@ -1,0 +1,22 @@
+driver.findElement(By.xpath("//footer[@class='footer']"));
+driver.findElement(By.xpath("//span[text()='Products']"));
+driver.findElement(By.xpath("//div[contains(@id,'contents')]"));
+driver.findElement(By.xpath("//div[contains(text(),'uncompromising')]"));
+driver.findElement(By.xpath("//span[text()='Products']//ancestor::div[1]"));
+driver.findElement(By.xpath("//div[@id='root']//descendant::span[3]"));
+driver.findElement(By.xpath("//div[@id='shopping_cart_container']//following::span[3]"));
+driver.findElement(By.xpath("//div[@id='shopping_cart_container']//parent::div//a[@id='inventory_sidebar_link']"));
+driver.findElement(By.xpath("//div[@id='shopping_cart_container']//preceding::div[2]"));
+driver.findElement(By.xpath("//input[@class='input_error form_input' and @type='text']"));
+
+driver.findElement(By.cssSelector(".footer"));
+driver.findElement(By.cssSelector(".primary_header .app_logo"));
+driver.findElement(By.cssSelector("#user-name"));
+driver.findElement(By.cssSelector("div"));
+driver.findElement(By.cssSelector("div .primary_header "));
+driver.findElement(By.cssSelector("[class=primary_header]"));
+driver.findElement(By.cssSelector("[alt~=Open]"));
+driver.findElement(By.cssSelector("[style|=z]"));
+driver.findElement(By.cssSelector("div[class^='primary']"));
+driver.findElement(By.cssSelector("a[href$='#']"));
+driver.findElement(By.cssSelector("div[class*='item']));
