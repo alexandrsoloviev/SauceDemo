@@ -1,8 +1,9 @@
 package tests;
 
 import org.testng.annotations.Test;
+import tests.base.BaseTest;
 
-public class InventoryPageTest extends BaseTest{
+public class InventoryPageTest extends BaseTest {
 
     @Test
     public void openInventoryPage(){

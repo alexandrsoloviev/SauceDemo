@@ -1,4 +1,4 @@
-package tests;
+package tests.base;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -6,19 +6,20 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import pages.*;
 
 import java.util.concurrent.TimeUnit;
-
+@Listeners (TestListener.class)
 public class BaseTest {
 
     WebDriver driver;
-    LoginPage loginPage;
-    InventoryPage inventoryPage;
-    CartPage cartPage;
-    CheckoutStepOnePage checkoutStepOnePage;
-    CheckoutStepTwoPage checkoutStepTwoPage;
-    CheckoutCompletePage checkoutCompleteTest;
+    protected LoginPage loginPage;
+    protected InventoryPage inventoryPage;
+    protected CartPage cartPage;
+    protected CheckoutStepOnePage checkoutStepOnePage;
+    protected CheckoutStepTwoPage checkoutStepTwoPage;
+    protected CheckoutCompletePage checkoutCompleteTest;
 
     @BeforeMethod
     public void setUp(){
