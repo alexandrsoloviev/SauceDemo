@@ -1,8 +1,9 @@
 package tests;
 
 import org.testng.annotations.Test;
+import tests.base.BaseTest;
 
-public class CheckoutCompleteTest extends BaseTest{
+public class CheckoutCompleteTest extends BaseTest {
 
     @Test
     public void open(){

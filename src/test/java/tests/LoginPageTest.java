@@ -1,21 +1,35 @@
 package tests;
 
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import tests.base.BaseTest;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
 public class LoginPageTest extends BaseTest {
 
+    @DataProvider(name = "Входящие данные для задачки iTechArt")
+    public Object[][] inputForITechTask() {
+        return new Object[][]{
+                {"","",""},
+                {5, "Art"},
+                {15, "iTechArt"},
+                {6, "iTech"},
 
-    @Test
-    public void validUserData(){
+        };
+    }
+
+
+    @Test(groups = "xxx")
+    public void validUserData() {
         loginPage.open();
-        loginPage.login("standard_user","secret_sauce");
+        loginPage.login("standard_user", "secret_sauce");
         loginPage.contentIsVisible();
     }
 
     @Test
-    public void userNameShouldBeRequired() {
+    public void negativLoginTest() {
+
         loginPage.open();
         loginPage.login("", "secret_sauce");
         assertEquals(loginPage.getErrorMessage(), "Epic sadface: Username is required");
